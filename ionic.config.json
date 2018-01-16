@@ -1,0 +1,8 @@
+{
+  "name": "TvMaisApp",
+  "app_id": "7d68203f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
