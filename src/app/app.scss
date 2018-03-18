@@ -54,15 +54,28 @@
   align-content: center;
 }
 
-ion-title {
-  width: 40% !important;
-  position: relative;
+// logo home:
+.logoHome {
+  max-width: 40%;
+  align-content: center;
   display: block;
-  
+  margin-left: 22%;
+  margin-right: auto;
+}
+
+// logo menu:
+.logoMenu {
+  max-width: 40%;
+  align-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .onboard {
-    border-color: #5f5f5f !important;
+    border-color: #ffffff !important;
 }
 .toolbar-background,
 .toggle-checked {
@@ -79,31 +92,56 @@ ion-title {
     //border-color: white;
 }
 
+
+.card-title-md,
+.card-md {
+  background-color:transparent;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.card-md h2,
+.card-md p {
+  background-color:transparent;
+  color: #252525;
+  font-weight: bold;
+}
+
+.card-content-md {
+  background-color: #ff7700;
+}
+
+ion-title {
+  width: 100% !important;
+  position: relative;
+  display: block;
+  .toolbar-title-md {
+    color: #ffffff;
+  }
+}
+
+// cor do botão do menu:
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  color: #ffffff;
+}
+
 ion-content,
-.input-wrapper,
-.item-inner,
-.item,
-ion-footer,
-ion-item,
-ion-label {
+ion-footer {
     transition: all 1.1s ease;
     background: #000000 !important;
     color: white !important;
 }
-ion-list {
-    background-color: #9a0cf1;
-}
-.time {
-    background-color: white;
-}
+
+// cor do texto do menu:
 .item {
     transition: all 1s ease;
-    background-color: #100815;
-    color: white;
+    background-color: #161616;
+    color: #ffffff;
 }
 .range-bar {
-    background-color: rgb(54, 54, 54) !important;
+    background-color: rgb(0, 0, 0) !important;
 }
+
 .s2,
 .s3,
 .toggle-inner,
@@ -111,7 +149,7 @@ ion-list {
 .range-pin::before,
 .range-knob,
 .range-bar-active {
-    background-color: white !important;
+    background-color: rgb(175, 175, 175) !important;
     color: black !important;
 }
 
@@ -121,26 +159,24 @@ ion-list {
   
 
 .menu-background {
-    .toolbar-content,
+  .toolbar-content,
   .back-button {
-    color: white;
+    color: rgb(255, 255, 255);
   }
   .toolbar-background,
   ion-navbar,
   ion-header,
   ion-content,
-  ion-item {
+  ion-list,
+  ion-item,
+  .item-inner,
+  .item,
+  ion-label,
+  .input-wrapper {
     background: #1d1d1d !important;
+    //background-color: #1d1d1d !important;
   }
-  .header-md::after,
-  .toolbar-background-ios {
-    background-image: none;
-    border-bottom: 0;
-  }
-  .header-ios .toolbar-background-ios,
-  .footer-ios .toolbar-background-ios {
-    border: 0;
-  }
+
 }
 
 
@@ -151,20 +187,10 @@ ion-list {
   }
   .toolbar-background,
   ion-navbar,
-  ion-header,
-  ion-content,
-  ion-item {
-    background: #7e7e7e !important;
+  ion-header {
+    background: #000000 !important;
   }
-  .header-md::after,
-  .toolbar-background-ios {
-    background-image: none;
-    border-bottom: 0;
-  }
-  .header-ios .toolbar-background-ios,
-  .footer-ios .toolbar-background-ios {
-    border: 0;
-  }
+
 }
 
 // .transparent-header {

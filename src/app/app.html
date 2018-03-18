@@ -1,12 +1,14 @@
 <ion-menu [content]="content" class="menu-background">
   <ion-header>
     <ion-toolbar>
-
+      <ion-title class="image-center">
+          <img class="logoMenu" src="assets/imgs/logo-tv (2016_10_09 11_52_39 UTC).png"/>
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="menu-background">
-    <ion-list>
+    <ion-list class="menu-background">
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>

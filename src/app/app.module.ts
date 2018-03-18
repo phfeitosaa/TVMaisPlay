@@ -13,6 +13,11 @@ import { ContatoPage } from '../pages/contato/contato';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AuthProvider } from '../providers/auth/auth';
+import { ProgramasProvider } from '../providers/programas/programas';
+import { HttpClientModule } from '@angular/common/http';
+import { ProgramacaoProvider } from '../providers/programacao/programacao';
+import { SlideProgramasProvider } from '../providers/slide-programas/slide-programas';
 
 @NgModule({
   declarations: [
@@ -26,8 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +47,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider,
+    ProgramasProvider,
+    ProgramacaoProvider,
+    SlideProgramasProvider
   ]
 })
 export class AppModule {}

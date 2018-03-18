@@ -1,11 +1,91 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      Programação
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding id="page4"></ion-content>
+<ion-header class="header-background">
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+          Programação
+      </ion-title>
+    </ion-navbar>
+
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="programacao_segment">
+        <ion-segment-button value="0" (click)="LoadProgDom()">
+          DOM
+        </ion-segment-button>
+        <ion-segment-button value="1" (click)="LoadProgSeg()">
+          SEG
+        </ion-segment-button>
+        <ion-segment-button value="2" (click)="LoadProgTer()">
+          TER
+        </ion-segment-button>
+        <ion-segment-button value="3" (click)="LoadProgQua()">
+          QUA
+        </ion-segment-button>
+        <ion-segment-button value="4" (click)="LoadProgQui()">
+          QUI
+        </ion-segment-button>
+        <ion-segment-button value="5" (click)="LoadProgSex()">
+          SEX
+        </ion-segment-button>
+        <ion-segment-button value="6" (click)="LoadProgSab()">
+          SAB
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="programacao_segment" >
+    
+    <ion-list *ngSwitchCase="'0'">
+      <ion-item *ngFor="let domingo of programacao_dom">
+        <h2> {{ domingo.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ domingo.horainicio }} - {{ domingo.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+      
+    <ion-list *ngSwitchCase="'1'" >
+      <ion-item *ngFor="let segunda of programacao_seg">
+        <h2>{{ segunda.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ segunda.horainicio }} - {{ segunda.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'2'">
+      <ion-item *ngFor="let terca of programacao_ter">
+        <h2>{{ terca.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ terca.horainicio }} - {{ terca.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'3'">
+      <ion-item *ngFor="let quarta of programacao_qua">
+        <h2>{{ quarta.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ quarta.horainicio }} - {{ quarta.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'4'">
+      <ion-item *ngFor="let quinta of programacao_qui">
+        <h2>{{ quinta.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ quinta.horainicio }} - {{ quinta.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'5'">
+      <ion-item *ngFor="let sexta of programacao_sex">
+        <h2>{{ sexta.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ sexta.horainicio }} - {{ sexta.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'6'">
+      <ion-item *ngFor="let sabado of programacao_sab">
+        <h2>{{ sabado.title.rendered }}</h2>
+        <h3><ion-icon name="clock"></ion-icon>  {{ sabado.horainicio }} - {{ sabado.horatermino }}</h3>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>

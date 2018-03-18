@@ -1,3 +1,6 @@
+import { ProgramasPage } from './../programas/programas';
+import { SlideProgramasProvider } from './../../providers/slide-programas/slide-programas';
+import { AoVivoPage } from './../ao-vivo/ao-vivo';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -7,8 +10,21 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  slidesProgramas;
 
+  constructor(public navCtrl: NavController, private slideProgramasProvider: SlideProgramasProvider) {
+    this.slideProgramasProvider.GetSlideProgramas().subscribe(data => {
+      console.log(data);
+      this.slidesProgramas = data;
+    })
+  }
+
+  GoToAoVivoPage(){
+    this.navCtrl.push(AoVivoPage)
+  }
+
+  GoToProgramasPage(){
+    this.navCtrl.push(ProgramasPage)
   }
 
 }

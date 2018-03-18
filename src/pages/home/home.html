@@ -4,49 +4,49 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title class="image-center">
-        <img src="assets/imgs/logo-tv (2016_10_09 11_52_39 UTC).png"/>
+        <img class="logoHome" src="assets/imgs/logo-tv (2016_10_09 11_52_39 UTC).png"/>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content parallax-header>
-  <div class="header-image"></div>
- 
-  <div class="main-content">
- 
+<ion-content>
+  <div id="profile-bg">
+
     <ion-slides autoplay="4000" loop="true">
       <ion-slide>
-        <img src="http://tvmais.org/wp-content/uploads/2016/02/s-novo-1-1745x650.png" />
+        <img src="http://tvmais.org/wp-content/uploads/2018/02/slide-novo-1-2016_10_09-11_52_39-UTC-2.png" />
       </ion-slide>
       <ion-slide>
-        <img src="http://tvmais.org/wp-content/uploads/2016/02/s-novo-2-1745x650.jpg" />
+        <img src="http://tvmais.org/wp-content/uploads/2018/02/slide-novo-2-2016_10_09-11_52_39-UTC-2.jpg" />
       </ion-slide>
       <ion-slide>
-        <img src="http://tvmais.org/wp-content/uploads/2016/02/s-novo-3-1745x650.jpg">
+        <img src="http://tvmais.org/wp-content/uploads/2018/02/slide-novo-3-2016_10_09-11_52_39-UTC-2.jpg">
       </ion-slide>
     </ion-slides>
+
+  </div>
+ 
+  <div id="content">
 
     <div padding margin-top>
       
       <h1>Ao vivo</h1>
-      <img onclick="" src="http://tvmais.org/wp-content/uploads/2018/02/Agora-na-TV-Mais.png">
+      <img src="http://tvmais.org/wp-content/uploads/2018/02/Agora-na-TV-Mais.png" (click)="GoToAoVivoPage()">
       
     </div>
     <div padding margin-top>
 
       <h1>Programas</h1>
-      <ion-slides spaceBetween="10" slidesPerView="2.5">
-          <ion-slide>
-              <img src="http://tvmais.org/wp-content/uploads/2014/10/Prog-1-Nossa-Conversa-1.jpg" />
-            </ion-slide>
-            <ion-slide>
-              <img src="http://tvmais.org/wp-content/uploads/2014/10/Prog-3-Dimensão-Total-novo.jpg" />
-            </ion-slide>
-            <ion-slide>
-              <img src="http://tvmais.org/wp-content/uploads/2014/10/Prog-2-A-hora-da-verdade-1.jpg">
-            </ion-slide>
+      <ion-slides spaceBetween="10" slidesPerView="2.5" >
+          <ion-slide *ngFor="let slide of slidesProgramas">
+            <img src="{{ slide.imageurl }}" (click)="GoToProgramasPage()" />
+          </ion-slide>
       </ion-slides>
     
     </div>
+    <div padding>
+        <button ion-button color="light" class="center" outline round>Programação completa</button>
+    </div>
+    
   </div>
 </ion-content>
