@@ -9,7 +9,7 @@
     </ion-navbar>
   </ion-header>
 
-<ion-content padding>
+<ion-content>
 
   <div class="video-container">
 
@@ -18,4 +18,54 @@
     frameborder="0" allowfullscreen></iframe>
     
   </div>
+
+  <div id="content" padding>
+    <h4>Programação de hoje</h4>
+      <div [ngSwitch]="programacao_segment" >
+    
+        <ion-list *ngSwitchCase="'0'">
+          <ion-item *ngFor="let domingo of programacao_dom">
+            <h2><ion-icon name="clock"></ion-icon> {{ domingo.horainicio }}  &nbsp;&nbsp;&nbsp;  {{ domingo.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+          
+        <ion-list *ngSwitchCase="'1'" >
+          <ion-item *ngFor="let segunda of programacao_seg">
+            <h2><ion-icon name="clock"></ion-icon>  {{ segunda.horainicio }} &nbsp;&nbsp;&nbsp; {{ segunda.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'2'">
+          <ion-item *ngFor="let terca of programacao_ter">
+            <h2><ion-icon name="clock"></ion-icon>  {{ terca.horainicio }} &nbsp;&nbsp;&nbsp; {{ terca.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'3'">
+          <ion-item *ngFor="let quarta of programacao_qua">
+            <h2><ion-icon name="clock"></ion-icon>  {{ quarta.horainicio }} &nbsp;&nbsp;&nbsp; {{ quarta.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'4'">
+          <ion-item *ngFor="let quinta of programacao_qui">
+            <h2><ion-icon name="clock"></ion-icon>  {{ quinta.horainicio }} &nbsp;&nbsp;&nbsp; {{ quinta.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'5'">
+          <ion-item *ngFor="let sexta of programacao_sex">
+            <h2><ion-icon name="clock"></ion-icon>  {{ sexta.horainicio }} &nbsp;&nbsp;&nbsp; {{ sexta.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'6'">
+          <ion-item *ngFor="let sabado of programacao_sab">
+            <h2><ion-icon name="clock"></ion-icon>  {{ sabado.horainicio }} &nbsp;&nbsp;&nbsp; {{ sabado.title.rendered }}</h2>
+          </ion-item>
+        </ion-list>
+    
+      </div>
+  </div>
+
 </ion-content>

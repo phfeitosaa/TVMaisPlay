@@ -1,6 +1,6 @@
 import { HomePage } from './../pages/home/home';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Icon } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -19,19 +19,19 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, icon: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Ao vivo', component: AoVivoPage },
-      { title: 'Sobre', component: SobrePage },
-      { title: 'Programas', component: ProgramasPage },
-      { title: 'Programação', component: ProgramacaoPage },
-      { title: 'Contato', component: ContatoPage }
+      { title: 'Início', icon: 'home', component: HomePage },
+      { title: 'Ao vivo', icon: 'play', component: AoVivoPage },
+      { title: 'Sobre', icon: 'information-circle', component: SobrePage },
+      { title: 'Programas', icon: 'images', component: ProgramasPage },
+      { title: 'Programação', icon: 'list-box', component: ProgramacaoPage },
+      { title: 'Contato', icon: 'contact', component: ContatoPage }
     ];
 
   }

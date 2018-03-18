@@ -108,7 +108,14 @@
 }
 
 .card-content-md {
-  background-color: #ff7700;
+  background-color: #f0870f;
+}
+
+.card-sobre-bg,
+.card-sobre-bg p {
+  background-color: #252525;
+  color: #ffffff;
+  //text-align: justify;
 }
 
 ion-title {
@@ -138,8 +145,24 @@ ion-footer {
     background-color: #161616;
     color: #ffffff;
 }
+
+.item-md {
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1em #f0870f;
+}
+
 .range-bar {
     background-color: rgb(0, 0, 0) !important;
+}
+
+[padding] h1:first-child, 
+[padding] h2:first-child, 
+[padding] h3:first-child, 
+[padding] h4:first-child,
+[padding] h5:first-child,
+[padding] h6:first-child {
+  margin-top: 0;
 }
 
 .s2,
@@ -174,11 +197,15 @@ ion-footer {
   ion-label,
   .input-wrapper {
     background: #1d1d1d !important;
-    //background-color: #1d1d1d !important;
+    border-color: red;
   }
 
 }
 
+[icon-left] ion-icon, [icon-start] ion-icon {
+  padding: 0.07em;
+  margin-right: 0.5em;
+}
 
 .header-background {
   .toolbar-content,
@@ -192,131 +219,3 @@ ion-footer {
   }
 
 }
-
-// .transparent-header {
-//   // This is just to make the header transparent and button/icon with white color
-//   .toolbar-content,
-//   .back-button {
-//     color: white;
-//   }
-//   .toolbar-background,
-//   ion-navbar,
-//   ion-header {
-//     background: #1d1d1d !important;
-//   }
-//   .header-md::after,
-//   .toolbar-background-ios {
-//     background-image: none;
-//     border-bottom: 0;
-//   }
-//   .header-ios .toolbar-background-ios,
-//   .footer-ios .toolbar-background-ios {
-//     border: 0;
-//   }
-//   // ---
-// }
-
-// right side menu
-// #menu-right {
-//   button {
-//     padding-left: 16px;
-//   }
-//   ion-content {
-//     background: rgba(255, 36, 36, 0.82);
-//   }
-//   .menu-inner {
-//     width: 10vh;
-//   }
-//   @media screen and (orientation: landscape) {
-//     .menu-inner {
-//       width: 15vh;
-//     }
-//   }
-//   .active-menu-item {
-//     position: absolute;
-//     border-top: 6px solid transparent;
-//     border-bottom: 6px solid transparent;
-//     border-left: 6px solid #ffffff;
-//     color: #FF5D5D;
-//   }
-//   .label {
-//     display: flex;
-//     align-items: center;
-//   }
-//   .list-md[no-lines] .item-block,
-//   .list-md[no-lines] ion-item-options,
-//   .list-md[no-lines] .item .item-inner,
-//   .list-ios[no-lines] .item-block,
-//   .list-ios[no-lines] ion-item-options,
-//   .list-ios[no-lines] .item .item-inner {
-//     padding: .3rem 0;
-//     background: transparent;
-//     color: white;
-//   }
-//   ion-icon {
-//     line-height: 1;
-//   }
-// }
-
-.icon-badge {
-  top: 0px;
-  right: 0px;
-  background: #FF5D5D;
-  color: white;
-  font-size: 12px;
-  position: absolute;
-  padding: 5px 8px;
-  border-radius: 15px;
-}
-
-// Sidemenu with avatar
-// #menu-avatar {
-//   .user-avatar {
-//     padding: .5em;
-//   }
-//   h3,
-//   .label {
-//     color: white;
-//     font-weight: bold;
-//   }
-//   .item {
-//     background: transparent;
-//   }
-//   ion-content {
-//     background: linear-gradient(48deg, rgba(157, 72, 173, 0.8) 0%, rgba(157, 72, 173, 0.86) 28%, rgba(0, 168, 168, 0.98) 93%, rgba(0, 168, 168, 1) 100%);
-//   }
-//   .menu-inner {
-//     background: rgba(255, 255, 255, .3);
-//   }
-// }
-
-// Material Design Sidemenu
-// #menu-material {
-//   .menu-header {
-//     padding: 5px 15px;
-//     background-image: url('../assets/img/misc/material-design-background.jpg');
-//     background-size: cover;
-//     color: white;
-//     .name {
-//       font-weight: 500;
-//       margin-bottom: 3px;
-//     }
-//     .e-mail {
-//       margin-top: 0;
-//       margin-bottom: 5px;
-//     }
-//   }
-//   .user-avatar {
-//     padding: .5em;
-//     height: 12vh;
-//   }
-//   h3,
-//   .label,
-//   {
-//     color: #999;
-//     font-weight: 400;
-//   }
-//   ion-icon {
-//     color: #777;
-//   }
-// }

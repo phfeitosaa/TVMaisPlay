@@ -1,3 +1,4 @@
+import { ProgramacaoPage } from './../programacao/programacao';
 import { ProgramasPage } from './../programas/programas';
 import { SlideProgramasProvider } from './../../providers/slide-programas/slide-programas';
 import { AoVivoPage } from './../ao-vivo/ao-vivo';
@@ -25,6 +26,10 @@ export class HomePage {
 
   GoToProgramasPage(){
     this.navCtrl.push(ProgramasPage)
+  }
+
+  GoToProgramacaoPage(){
+    this.navCtrl.push(ProgramacaoPage)
   }
 
 }
