@@ -1,8 +1,8 @@
 {
-  "name": "TvMaisApp",
+  "name": "TV Mais Play",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Devinside Solutions",
+  "homepage": "https://devinside.com.br/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -43,7 +43,7 @@
     "@ionic/app-scripts": "3.1.6",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project",
+  "description": "Aplicativo mobile da TV Mais canal 15 multiplay",
   "cordova": {
     "plugins": {
       "cordova-plugin-statusbar": {},

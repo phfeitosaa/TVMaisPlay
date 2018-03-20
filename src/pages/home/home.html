@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title class="image-center">
-        <img class="logoHome" src="assets/imgs/logo-tv (2016_10_09 11_52_39 UTC).png"/>
+        <img class="logoHome" src="assets/imgs/logo_tvmais_2.png"/>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -30,13 +30,13 @@
 
     <div padding margin-top>
       
-      <h1>Ao vivo</h1>
-      <img src="http://tvmais.org/wp-content/uploads/2018/02/Agora-na-TV-Mais.png" (click)="GoToAoVivoPage()">
+      <h2>AO VIVO</h2>
+      <img src="https://tvmais.org/wp-content/uploads/2018/03/Agora-na-TV-Mais.png" (click)="GoToAoVivoPage()">
       
     </div>
     <div padding margin-top>
 
-      <h1>Programas</h1>
+      <h2>PROGRAMAS</h2>
       <ion-slides spaceBetween="10" slidesPerView="2.5" >
           <ion-slide *ngFor="let slide of slidesProgramas">
             <img src="{{ slide.imageurl }}" (click)="GoToProgramasPage()" />

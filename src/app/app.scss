@@ -146,10 +146,11 @@ ion-footer {
     color: #ffffff;
 }
 
-.item-md {
+.list-md .item-block .item-inner {
   padding-left: 16px;
   padding-right: 16px;
   border: 1em #f0870f;
+  border-bottom: 0px solid #dedede;
 }
 
 .range-bar {
@@ -196,7 +197,7 @@ ion-footer {
   .item,
   ion-label,
   .input-wrapper {
-    background: #1d1d1d !important;
+    background: #141414 !important;
     border-color: red;
   }
 
