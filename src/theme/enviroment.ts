@@ -3,6 +3,7 @@ export const enviroment = {
     jwt_url: '/jwt-auth/v1/token',
     programas_url: '/wp-json/wp/v2/programas',
     slideProg_url: '/wp-json/wp/v2/slideprog',
+    slideHome_url: '/wp-json/wp/v2/slidehome',
     programacao_dom_url: '/wp-json/wp/v2/prog-dom?per_page=30',
     programacao_seg_url: '/wp-json/wp/v2/prog-seg?per_page=30',
     programacao_ter_url: '/wp-json/wp/v2/prog-ter?per_page=30',

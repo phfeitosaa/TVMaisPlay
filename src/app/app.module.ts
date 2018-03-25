@@ -18,6 +18,7 @@ import { ProgramasProvider } from '../providers/programas/programas';
 import { HttpClientModule } from '@angular/common/http';
 import { ProgramacaoProvider } from '../providers/programacao/programacao';
 import { SlideProgramasProvider } from '../providers/slide-programas/slide-programas';
+import { SlideHomeProvider } from '../providers/slide-home/slide-home';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SlideProgramasProvider } from '../providers/slide-programas/slide-progr
     AuthProvider,
     ProgramasProvider,
     ProgramacaoProvider,
-    SlideProgramasProvider
+    SlideProgramasProvider,
+    SlideHomeProvider
   ]
 })
 export class AppModule {}

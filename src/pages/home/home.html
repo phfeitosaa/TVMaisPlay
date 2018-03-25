@@ -12,15 +12,9 @@
 <ion-content>
   <div id="profile-bg">
 
-    <ion-slides autoplay="4000" loop="true">
-      <ion-slide>
-        <img src="http://tvmais.org/wp-content/uploads/2018/02/slide-novo-1-2016_10_09-11_52_39-UTC-2.png" />
-      </ion-slide>
-      <ion-slide>
-        <img src="http://tvmais.org/wp-content/uploads/2018/02/slide-novo-2-2016_10_09-11_52_39-UTC-2.jpg" />
-      </ion-slide>
-      <ion-slide>
-        <img src="http://tvmais.org/wp-content/uploads/2018/02/slide-novo-3-2016_10_09-11_52_39-UTC-2.jpg">
+    <ion-slides loop="true" pager="true" paginationType="bullets">
+      <ion-slide *ngFor="let slideh of slidesHome">
+        <img src="{{ slideh.imageurl }}" />
       </ion-slide>
     </ion-slides>
 

@@ -65,13 +65,11 @@
 
 // logo menu:
 .logoMenu {
-  max-width: 40%;
+  max-width: 60%;
   align-content: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .onboard {
@@ -178,9 +176,14 @@ ion-footer {
 }
 
 .back-button {
-    color: white;
-  }
+  color: white;
+}
   
+
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #f0870f;
+}
 
 .menu-background {
   .toolbar-content,

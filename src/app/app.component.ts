@@ -1,6 +1,6 @@
 import { HomePage } from './../pages/home/home';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Icon } from 'ionic-angular';
+import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 

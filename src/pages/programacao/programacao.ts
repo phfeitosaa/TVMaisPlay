@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, DateTime  } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { ProgramacaoProvider } from './../../providers/programacao/programacao';
 
 @Component({
