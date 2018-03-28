@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title class="image-center">
-        <img class="logoHome" src="assets/imgs/logo_tvmais_2.png"/>
+      <img class="logoHome" src="assets/imgs/logo_tvmais_2.png"/>
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -12,14 +12,14 @@
 <ion-content>
   <div id="profile-bg">
 
-    <ion-slides loop="true" pager="true" paginationType="bullets">
+    <ion-slides pager="true" paginationType="bullets">
       <ion-slide *ngFor="let slideh of slidesHome">
         <img src="{{ slideh.imageurl }}" />
       </ion-slide>
     </ion-slides>
 
   </div>
- 
+
   <div id="content">
 
     <div padding margin-top>
@@ -32,14 +32,14 @@
 
       <h2>PROGRAMAS</h2>
       <ion-slides spaceBetween="10" slidesPerView="2.5" >
-          <ion-slide *ngFor="let slide of slidesProgramas">
-            <img src="{{ slide.imageurl }}" (click)="GoToProgramasPage()" />
-          </ion-slide>
+        <ion-slide *ngFor="let slide of slidesProgramas">
+          <img src="{{ slide.imageurl }}" (click)="GoToProgramasPage()" />
+        </ion-slide>
       </ion-slides>
     
     </div>
     <div padding>
-        <button ion-button color="light" class="center" outline round (click)="GoToProgramacaoPage()">Programação completa</button>
+      <button ion-button color="light" class="center" outline round (click)="GoToProgramacaoPage()">Programação completa</button>
     </div>
     
   </div>
